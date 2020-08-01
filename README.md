@@ -1,2 +1,2 @@
 # caculater
-wrong input is not allowed~
+If you need it, just take away,but please leave a star!
