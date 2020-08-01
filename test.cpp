@@ -1,38 +1,39 @@
 /*---------------------------------------
-º¯ÊýÐÍ¼ÆËãÆ÷(VC++6.0,Win32 Console)
-¹¦ÄÜ£º
-Ä¿Ç°Ìá¹©ÁË10¶à¸ö³£ÓÃÊýÑ§º¯Êý:
-    ¢ÅÕýÏÒsin
-    ¢ÆÓàÏÒcos
-    ¢ÇÕýÇÐtan
-    ¢È¿ªÆ½·½sqrt
-    ¢É·´ÕýÏÒarcsin
-    ¢Ê·´ÓàÏÒarccos
-    ¢Ë·´ÕýÇÐarctan
-    ¢Ì³£ÓÃ¶ÔÊýlg
-    ¢Í×ÔÈ»¶ÔÊýln
-    ¢Î£åÖ¸Êýexp
-    ¢Ï³ËÃÝº¯Êý^
-    ¢ÐÏòÉÏÈ¡Õûceil
-    ¢ÑÏòÏÂÈ¡Õûfloor
-    ¢ÒËÄÉáÎåÈëÈ¡Õûround
-ÓÃ·¨£º
-Èç¹ûÒªÇó2µÄ32´ÎÃÝ£¬¿ÉÒÔ´òÈë2^32<»Ø³µ>
-Èç¹ûÒªÇó30¶È½ÇµÄÕýÇÐ¿É¼üÈëtan(Pi/6)<»Ø³µ>
-×¢Òâ²»ÄÜ´òÈë£ºtan(30)<Enter>
-Èç¹ûÒªÇó1.23»¡¶ÈµÄÕýÏÒ£¬ÓÐ¼¸ÖÖ·½·¨¶¼ÓÐÐ§£º
+copyright èµµ4è€å¸ˆ (CSDN) all rights reserved
+å‡½æ•°åž‹è®¡ç®—å™¨(VC++6.0,Win32 Console)
+åŠŸèƒ½ï¼š
+ç›®å‰æä¾›äº†10å¤šä¸ªå¸¸ç”¨æ•°å­¦å‡½æ•°:
+    â‘´æ­£å¼¦sin
+    â‘µä½™å¼¦cos
+    â‘¶æ­£åˆ‡tan
+    â‘·å¼€å¹³æ–¹sqrt
+    â‘¸åæ­£å¼¦arcsin
+    â‘¹åä½™å¼¦arccos
+    â‘ºåæ­£åˆ‡arctan
+    â‘»å¸¸ç”¨å¯¹æ•°lg
+    â‘¼è‡ªç„¶å¯¹æ•°ln
+    â‘½ï½…æŒ‡æ•°exp
+    â‘¾ä¹˜å¹‚å‡½æ•°^
+    â‘¿å‘ä¸Šå–æ•´ceil
+    â’€å‘ä¸‹å–æ•´floor
+    â’å››èˆäº”å…¥å–æ•´round
+ç”¨æ³•ï¼š
+å¦‚æžœè¦æ±‚2çš„32æ¬¡å¹‚ï¼Œå¯ä»¥æ‰“å…¥2^32<å›žè½¦>
+å¦‚æžœè¦æ±‚30åº¦è§’çš„æ­£åˆ‡å¯é”®å…¥tan(Pi/6)<å›žè½¦>
+æ³¨æ„ä¸èƒ½æ‰“å…¥ï¼štan(30)<Enter>
+å¦‚æžœè¦æ±‚1.23å¼§åº¦çš„æ­£å¼¦ï¼Œæœ‰å‡ ç§æ–¹æ³•éƒ½æœ‰æ•ˆï¼š
 sin(1.23)<Enter>
 sin 1.23 <Enter>
 sin1.23  <Enter>
-Èç¹ûÑéÖ¤ÕýÓàÏÒµÄÆ½·½ºÍ¹«Ê½,¿É´òÈësin(1.23)^2+cos(1.23)^2 <Enter>»òsin1.23^2+cos1.23^2 <Enter>
-´ËÍâÁ½º¯Êý±í´ïÊ½Á¬ÔÚÒ»Æð,×Ô¶¯Àí½âÎªÏà³ËÈç£ºsin1.23cos0.77+cos1.23sin0.77¾ÍµÈ¼ÛÓÚsin(1.23)*cos(0.77)+cos(1.23)*sin(0.77)
-µ±È»Äã»¹¿ÉÒÔÒÀ¾ÝÈý½Ç±ä»»£¬ÔÙÓÃsin(1.23+0.77)Ò²¼´sin2ÑéÖ¤Ò»ÏÂ¡£
-±¾¼ÆËãÆ÷³ä·Ö¿¼ÂÇÁËÔËËã·ûµÄÓÅÏÈ¼¶Òò´ËÖîÈç£º2+3*4^2 Êµ¼ÊÉÏÏàµ±ÓÚ£º2+(3*(4*4))
-ÁíÍâº¯ÊýÃûÇ°ÃæÈç¹ûÊÇÊý×Ö,ÄÇÃ´×Ô¶¯ÈÏÎª¶þÕßÏà³Ë.
-Í¬Àí£¬Èç¹ûÄ³ÊýµÄÓÒ²àÊÇ×óÀ¨ºÅ£¬Ôò×Ô¶¯ÈÏÎª¸ÃÊýÓëÀ¨»¡ÏîÖ®¼äÒþº¬Ò»³ËºÅ¡£
-Èç£º3sin1.2^2+5cos2.1^2 Ïàµ±ÓÚ3*sin2(1.2)+5*cos2(2.1)
-ÓÖÈç£º4(3-2(sqrt5-1)+ln2)+lg5 Ïàµ±ÓÚ4*(3-2*(¡Ì5 -1)+loge(2))+log10(5)
-´ËÍâ£¬±¾¼ÆËãÆ÷Ìá¹©ÁËÔ²ÖÜÂÊ Pi¼üÈë×ÖÄ¸Ê±²»Çø·Ö´óÐ¡Ð´,ÒÔ·½±ãÊ¹ÓÃ¡£
+å¦‚æžœéªŒè¯æ­£ä½™å¼¦çš„å¹³æ–¹å’Œå…¬å¼,å¯æ‰“å…¥sin(1.23)^2+cos(1.23)^2 <Enter>æˆ–sin1.23^2+cos1.23^2 <Enter>
+æ­¤å¤–ä¸¤å‡½æ•°è¡¨è¾¾å¼è¿žåœ¨ä¸€èµ·,è‡ªåŠ¨ç†è§£ä¸ºç›¸ä¹˜å¦‚ï¼šsin1.23cos0.77+cos1.23sin0.77å°±ç­‰ä»·äºŽsin(1.23)*cos(0.77)+cos(1.23)*sin(0.77)
+å½“ç„¶ä½ è¿˜å¯ä»¥ä¾æ®ä¸‰è§’å˜æ¢ï¼Œå†ç”¨sin(1.23+0.77)ä¹Ÿå³sin2éªŒè¯ä¸€ä¸‹ã€‚
+æœ¬è®¡ç®—å™¨å……åˆ†è€ƒè™‘äº†è¿ç®—ç¬¦çš„ä¼˜å…ˆçº§å› æ­¤è¯¸å¦‚ï¼š2+3*4^2 å®žé™…ä¸Šç›¸å½“äºŽï¼š2+(3*(4*4))
+å¦å¤–å‡½æ•°åå‰é¢å¦‚æžœæ˜¯æ•°å­—,é‚£ä¹ˆè‡ªåŠ¨è®¤ä¸ºäºŒè€…ç›¸ä¹˜.
+åŒç†ï¼Œå¦‚æžœæŸæ•°çš„å³ä¾§æ˜¯å·¦æ‹¬å·ï¼Œåˆ™è‡ªåŠ¨è®¤ä¸ºè¯¥æ•°ä¸Žæ‹¬å¼§é¡¹ä¹‹é—´éšå«ä¸€ä¹˜å·ã€‚
+å¦‚ï¼š3sin1.2^2+5cos2.1^2 ç›¸å½“äºŽ3*sin2(1.2)+5*cos2(2.1)
+åˆå¦‚ï¼š4(3-2(sqrt5-1)+ln2)+lg5 ç›¸å½“äºŽ4*(3-2*(âˆš5 -1)+loge(2))+log10(5)
+æ­¤å¤–ï¼Œæœ¬è®¡ç®—å™¨æä¾›äº†åœ†å‘¨çŽ‡ Pié”®å…¥å­—æ¯æ—¶ä¸åŒºåˆ†å¤§å°å†™,ä»¥æ–¹ä¾¿ä½¿ç”¨ã€‚
 ----------------------------------------*/
 #include <bits/stdc++.h>
 #include <windows.h>
@@ -52,7 +53,7 @@ double round(double dVal, short iPlaces) {//iPlaces>=0
     return (dRetval);
 }
 double fun(double x,char op[],int *iop) {
-    while (op[*iop-1]<32) //±¾ÐÐÊ¹µÃº¯ÊýÇ¶Ì×µ÷ÓÃÊ±²»±Ø¼ÓÀ¨ºÅ,Èç arc sin(sin(1.234)) Ö»Ðè¼üÈëarc sin sin 1.234<Enter>
+    while (op[*iop-1]<32) //æœ¬è¡Œä½¿å¾—å‡½æ•°åµŒå¥—è°ƒç”¨æ—¶ä¸å¿…åŠ æ‹¬å·,å¦‚ arc sin(sin(1.234)) åªéœ€é”®å…¥arc sin sin 1.234<Enter>
         switch (op[*iop-1]) {
         case  7: x=sin(x);    (*iop)--;break;
         case  8: x=cos(x);    (*iop)--;break;
@@ -71,10 +72,10 @@ double fun(double x,char op[],int *iop) {
     return x;
 }
 double calc(char *expr,char **addr) {
-    static int deep; //µÝ¹éÉî¶È
+    static int deep; //é€’å½’æ·±åº¦
     static char *fname[]={"sin","cos","tan","sqrt","arcsin","arccos","arctan","lg","ln","exp","ceil","floor","round",NULL};
-    double ST[10]={0.0}; //Êý×ÖÕ»
-    char op[10]={'+'}; //ÔËËã·ûÕ»
+    double ST[10]={0.0}; //æ•°å­—æ ˆ
+    char op[10]={'+'}; //è¿ç®—ç¬¦æ ˆ
     char c,*rexp,*pp,*pf;
     int ist=1,iop=1,last,i;
  
@@ -93,37 +94,37 @@ double calc(char *expr,char **addr) {
     }
     last = !DIGIT;
     while ((c=*pp)!='\0') {
-        if (c=='(') {//×óÔ²À¨»¡
+        if (c=='(') {//å·¦åœ†æ‹¬å¼§
             deep++;
             ST[ist++]=calc(++pp,addr);
             deep--;
             ST[ist-1]=fun(ST[ist-1],op,&iop);
             pp = *addr;
             last = DIGIT;
-            if (*pp == '('||isalpha(*pp) && strnicmp(pp,"Pi",2)) {//Ä¿µÄÊÇ£ºµ±ÓÒÔ²À¨»¡µÄÓÒâüÎª×óÔ²À¨»¡»òº¯ÊýÃû×ÖÊ±£¬Ä¬ÈÏÆäÎª³Ë·¨
+            if (*pp == '('||isalpha(*pp) && strnicmp(pp,"Pi",2)) {//ç›®çš„æ˜¯ï¼šå½“å³åœ†æ‹¬å¼§çš„å³æ»ä¸ºå·¦åœ†æ‹¬å¼§æˆ–å‡½æ•°åå­—æ—¶ï¼Œé»˜è®¤å…¶ä¸ºä¹˜æ³•
                 op[iop++]='*';
                 last = !DIGIT;
                 c = op[--iop];
                 goto operate ;
             }
         }
-        else if (c==')') {//ÓÒÔ²À¨»¡
+        else if (c==')') {//å³åœ†æ‹¬å¼§
             pp++;
             break;
         } else if (isalpha(c)) {
             if (!strnicmp(pp,"Pi",2)) {
                 if (last==DIGIT) {
-                    cout<< "¦Ð×ó²àÓö£©" <<endl;exit(1);
+                    cout<< "Ï€å·¦ä¾§é‡ï¼‰" <<endl;exit(1);
                 }
                 ST[ist++]=3.14159265358979323846264338328;
                 ST[ist-1]=fun(ST[ist-1],op,&iop);
                 pp += 2;
                 last = DIGIT;
                 if (!strnicmp(pp,"Pi",2)) {
-                    cout<< "Á½¸ö¦ÐÏàÁ¬" <<endl;exit(2);
+                    cout<< "ä¸¤ä¸ªÏ€ç›¸è¿ž" <<endl;exit(2);
                 }
                 if (*pp=='(') {
-                    cout<< "¦ÐÓÒ²àÓö£¨" <<endl;exit(3);
+                    cout<< "Ï€å³ä¾§é‡ï¼ˆ" <<endl;exit(3);
                 }
             } else {
                 for (i=0; (pf=fname[i])!=NULL; i++)
@@ -132,13 +133,13 @@ double calc(char *expr,char **addr) {
                     op[iop++] = 07+i;
                     pp += strlen(pf);
                 } else {
-                    cout<< "Ä°Éúº¯ÊýÃû" <<endl;exit(4);
+                    cout<< "é™Œç”Ÿå‡½æ•°å" <<endl;exit(4);
                 }
             }
         } else if (c=='+'||c=='-'||c=='*'||c=='/'||c=='%'||c=='^') {
             char cc;
             if (last != DIGIT) {
-                cout<< "ÔËËã·ûÕ³Á¬" <<endl;exit(5);
+                cout<< "è¿ç®—ç¬¦ç²˜è¿ž" <<endl;exit(5);
             }
             pp++;
             if (c=='+'||c=='-') {
@@ -172,19 +173,19 @@ operate:        cc = op[iop-1];
             } else {
                 cc = op[iop-1];
                 if (cc=='^') {
-                    cout<< "³ËÃÝ·ûÁ¬ÓÃ" <<endl;exit(6);
+                    cout<< "ä¹˜å¹‚ç¬¦è¿žç”¨" <<endl;exit(6);
                 }
                 op[iop++] = c;
             }
             last = !DIGIT;
         } else {
             if (last == DIGIT) {
-                cout<< "Á½Êý×ÖÕ³Á¬" <<endl;exit(7);
+                cout<< "ä¸¤æ•°å­—ç²˜è¿ž" <<endl;exit(7);
             }
             ST[ist++]=strtod(pp,&rexp);
             ST[ist-1]=fun(ST[ist-1],op,&iop);
             if (pp == rexp) {
-                cout<< "·Ç·¨×Ö·û" <<endl;exit(8);
+                cout<< "éžæ³•å­—ç¬¦" <<endl;exit(8);
             }
             pp = rexp;
             last = DIGIT;
@@ -198,7 +199,7 @@ operate:        cc = op[iop-1];
     }
     *addr=pp;
     if (iop>=ist) {
-        cout<< "±í´ïÊ½ÓÐÎó" <<endl;exit(9);
+        cout<< "è¡¨è¾¾å¼æœ‰è¯¯" <<endl;exit(9);
     }
     while (iop) {
         --ist;
@@ -217,23 +218,23 @@ int main(int argc,char **argv) {
     int a;
  
     if (argc<2) {
-        if (GetConsoleOutputCP()!=936) system("chcp 936>NUL");//ÖÐÎÄ´úÂëÒ³
-        cout << "¼ÆËãº¯Êý±í´ïÊ½µÄÖµ¡£"<<endl<<"Ö§³Ö(),+,-,*,/,%,^,Pi,sin,cos,tan,sqrt,arcsin,arccos,arctan,lg,ln,exp,ceil,floor,round"<<endl;
+        if (GetConsoleOutputCP()!=936) system("chcp 936>NUL");//ä¸­æ–‡ä»£ç é¡µ
+        cout << "è®¡ç®—å‡½æ•°è¡¨è¾¾å¼çš„å€¼ã€‚"<<endl<<"æ”¯æŒ(),+,-,*,/,%,^,Pi,sin,cos,tan,sqrt,arcsin,arccos,arctan,lg,ln,exp,ceil,floor,round"<<endl;
         while (1) {
-            cout << "ÇëÊäÈë±í´ïÊ½£º";
+            cout << "è¯·è¾“å…¥è¡¨è¾¾å¼ï¼š";
             gets(s);
             if (s[0]==0) break;//
             cout << s <<"=";
             cout << setprecision(15) << calc(s,&endss) << endl;
         }
     } else if (argc==2 && 0==strcmp(argv[1],"/?")) {
-        if (GetConsoleOutputCP()!=936) system("chcp 936>NUL");//ÖÐÎÄ´úÂëÒ³
-        cout << "¼ÆËãÓÉ¡Ý1¸öÃüÁîÐÐ²ÎÊý¸ø³öµÄº¯Êý±í´ïÊ½µÄÖµ¡£×îºóÒ»¸ö²ÎÊýÊÇ.0¡«.15±íÊ¾½«¼ÆËã½á¹û±£ÁôÐ¡Êý0¡«15Î»"<<endl<<"Ö§³Ö(),+,-,*,/,%,^^,Pi,sin,cos,tan,sqrt,arcsin,arccos,arctan,lg,ln,exp,ceil,floor,round"<<endl;
+        if (GetConsoleOutputCP()!=936) system("chcp 936>NUL");//ä¸­æ–‡ä»£ç é¡µ
+        cout << "è®¡ç®—ç”±â‰¥1ä¸ªå‘½ä»¤è¡Œå‚æ•°ç»™å‡ºçš„å‡½æ•°è¡¨è¾¾å¼çš„å€¼ã€‚æœ€åŽä¸€ä¸ªå‚æ•°æ˜¯.0ï½ž.15è¡¨ç¤ºå°†è®¡ç®—ç»“æžœä¿ç•™å°æ•°0ï½ž15ä½"<<endl<<"æ”¯æŒ(),+,-,*,/,%,^^,Pi,sin,cos,tan,sqrt,arcsin,arccos,arctan,lg,ln,exp,ceil,floor,round"<<endl;
     } else {
         strncpy(s,argv[1],MAXLEN-1);s[MAXLEN-1]=0;
         if (argc>2) {
-            for (a=2;a<argc-1;a++) strncat(s,argv[a],MAXLEN-1);//½«¿Õ¸ñ¼ä¸ôµÄ¸÷²ÎÊýÁ¬½Óµ½s
-            if (1==sscanf(argv[a],".%d",&pcs) && 0<=pcs && pcs<=15) {//×îºóÒ»¸ö²ÎÊýÊÇ.0¡«.15±íÊ¾½«¼ÆËã½á¹û±£ÁôÐ¡Êý0¡«15Î»
+            for (a=2;a<argc-1;a++) strncat(s,argv[a],MAXLEN-1);//å°†ç©ºæ ¼é—´éš”çš„å„å‚æ•°è¿žæŽ¥åˆ°s
+            if (1==sscanf(argv[a],".%d",&pcs) && 0<=pcs && pcs<=15) {//æœ€åŽä¸€ä¸ªå‚æ•°æ˜¯.0ï½ž.15è¡¨ç¤ºå°†è®¡ç®—ç»“æžœä¿ç•™å°æ•°0ï½ž15ä½
                 printf("%.*lf\n",pcs,calc(s,&endss));
             } else {
                 strncat(s,argv[a],MAXLEN-1);
